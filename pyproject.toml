@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "nonebot_plugin_jx3_open_group"
+version = "0.0.1"
+description = "剑网3开团插件，在QQ进行开团，方便提前组队下本。"
+authors = ["Ikaros <327209194@qq.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "nonebot_plugin_jx3_open_group"}]
+homepage = "https://github.com/Ikaros-521/nonebot_plugin_jx3_open_group"
+repository = "https://github.com/Ikaros-521/nonebot_plugin_jx3_open_group"
+documentation = "https://github.com/Ikaros-521/nonebot_plugin_jx3_open_group/blob/master/README.md"
+
+# 添加清华镜像
+[[tool.poetry.source]]
+name = "tsinghua"
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple/"
+default = true  # 设置清华镜像为默认回调, 以避免 poetry 在某些缺省操作里又回调到 pypi 仓库.
+
+[tool.poetry.dependencies]
+python = "^3.8"
+aiohttp = "^3.8.3"
+nonebot2 = "^2.0.0b5"
+nonebot-adapter-onebot = "^2.1.3"
+nonebot-plugin-htmlrender = "^0.2.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
